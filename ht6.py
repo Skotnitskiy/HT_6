@@ -79,3 +79,26 @@ print(oval.color, oval.diameter)
 
 sqr = Square(10, 20, "Black")
 print(sqr.color, sqr.x, sqr.y)
+
+
+class Library(object):
+    books = {"book1": "text1", "book2": "text2", "book3": "text3"}
+
+    def get_book(self, name):
+        bk = self.books.get(name)
+        del self.books[name]
+        return bk
+
+    def give_back(self, bk):
+        self.books.update(bk)
+        print("The book {} returned".format(bk))
+
+
+library = Library()
+print(library.books)
+book_name = "book1"
+book_text = library.get_book(book_name)
+book = {book_name: book_text}
+print(library.books)
+library.give_back(book)
+print(library.books)
