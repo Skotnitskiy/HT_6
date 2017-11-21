@@ -102,3 +102,19 @@ book = {book_name: book_text}
 print(library.books)
 library.give_back(book)
 print(library.books)
+
+
+class A(object):
+    value = "some value"
+
+
+class B(object):
+    def func(self, a_obj):
+        a_obj.value = "Next value"
+        return a_obj.value
+
+
+a = A()
+print(a.value)
+b = B()
+print(b.func(a))
