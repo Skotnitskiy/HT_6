@@ -31,8 +31,20 @@ clc.add(3, 2)
 print(clc.last_result)
 
 
-"""Створити клас Person, в якому буде присутнім метод __init__ який буде приймати * аргументів, 
-які зберігатиме в відповідні змінні. 
-Методи, які повинні бути в класі Person - show_age, print_name, show_all_information."""
-
 class Person(object):
+    def __init__(self, *args):
+        self.age = args[0]
+        self.name = args[1]
+
+    def show_age(self):
+        return self.age
+
+    def print_name(self):
+        print("Name is", self.name)
+
+    def show_all_information(self):
+        print("Age = {}, Name = {}".format(self.age, self.name))
+
+
+p = Person(24, "Sergey")
+p.show_all_information()
