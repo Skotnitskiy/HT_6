@@ -52,3 +52,21 @@ person2 = Person(26, "Qwerty")
 person1.profession = "Student"
 person2.profession = "Worker"
 person1.show_all_information()
+
+
+class Figure(object):
+    color = "white"
+
+    def set_color(self, color):
+        self.color = color
+
+
+class Oval(Figure):
+    def __init__(self, diameter):
+        self.diameter = diameter
+
+
+class Square(Figure):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
