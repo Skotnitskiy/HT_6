@@ -26,7 +26,6 @@ class Calc(object):
 
 
 clc = Calc()
-print(clc.last_result)
 clc.add(3, 2)
 print(clc.last_result)
 
@@ -55,18 +54,28 @@ person1.show_all_information()
 
 
 class Figure(object):
-    color = "white"
+    def __init__(self, color="white"):
+        self.color = color
 
     def set_color(self, color):
         self.color = color
 
 
 class Oval(Figure):
-    def __init__(self, diameter):
+    def __init__(self, color, diameter):
+        self.color = color
         self.diameter = diameter
 
 
 class Square(Figure):
-    def __init__(self, x, y):
+    def __init__(self, color, x, y):
+        self.color = color
         self.x = x
         self.y = y
+
+
+oval = Oval(10, "Red")
+print(oval.color, oval.diameter)
+
+sqr = Square(10, 20, "Black")
+print(sqr.color, sqr.x, sqr.y)
