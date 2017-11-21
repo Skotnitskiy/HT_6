@@ -148,3 +148,12 @@ class Thing2(object):
 
 Thing2.letters = "abc"
 print(Thing2.letters)
+
+
+class Thing3(object):
+    pass
+
+
+thing3 = Thing3()
+thing3.letters = "xyz"
+print(thing3.letters)
