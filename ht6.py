@@ -132,3 +132,11 @@ print(Counter().count)
 print(Counter().count)
 print(Counter().count)
 print(Counter().count)
+
+
+class Thing(object):
+    pass
+
+
+thing = Thing()
+print("Thing class ", type(Thing), "Thing object ", Thing())
