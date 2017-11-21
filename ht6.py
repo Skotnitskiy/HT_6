@@ -118,3 +118,17 @@ a = A()
 print(a.value)
 b = B()
 print(b.func(a))
+
+
+class Counter(object):
+    count = 0
+
+    def __init__(self):
+        self.__class__.count += 1
+
+
+print(Counter().count)
+print(Counter().count)
+print(Counter().count)
+print(Counter().count)
+print(Counter().count)
