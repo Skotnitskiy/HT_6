@@ -63,13 +63,13 @@ class Figure(object):
 
 class Oval(Figure):
     def __init__(self, color, diameter):
-        self.color = color
+        super(Oval, self).__init__(color)
         self.diameter = diameter
 
 
 class Square(Figure):
     def __init__(self, color, x, y):
-        self.color = color
+        super(Square, self).__init__(color)
         self.x = x
         self.y = y
 
