@@ -43,8 +43,12 @@ class Person(object):
         print("Name is", self.name)
 
     def show_all_information(self):
-        print("Age = {}, Name = {}".format(self.age, self.name))
+        for key, value in self.__dict__.items():
+            print(key, "=", value)
 
 
-p = Person(24, "Sergey")
-p.show_all_information()
+person1 = Person(24, "Sergey")
+person2 = Person(26, "Qwerty")
+person1.profession = "Student"
+person2.profession = "Worker"
+person1.show_all_information()
