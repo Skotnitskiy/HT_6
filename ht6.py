@@ -157,3 +157,13 @@ class Thing3(object):
 thing3 = Thing3()
 thing3.letters = "xyz"
 print(thing3.letters)
+
+
+class DefaultClass(object):
+    def __init__(self, name, symbol_number):
+        self.name = name
+        self.symbol_name = symbol_number
+
+
+default_class_obj = DefaultClass("Some name", 10)
+print(default_class_obj.name, default_class_obj.symbol_name)
