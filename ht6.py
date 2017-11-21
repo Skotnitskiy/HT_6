@@ -140,3 +140,11 @@ class Thing(object):
 
 thing = Thing()
 print("Thing class ", type(Thing), "Thing object ", Thing())
+
+
+class Thing2(object):
+    pass
+
+
+Thing2.letters = "abc"
+print(Thing2.letters)
