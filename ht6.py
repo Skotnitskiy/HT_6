@@ -176,5 +176,10 @@ class DefaultClass1(object):
     def __init__(self, dict):
         object.__setattr__(self, "__dict__", dict)
 
+    def print_info(self):
+        for key, value in self.__dict__.items():
+            print(key, "=", value)
+
 
 user = DefaultClass1(dict_of_class)
+user.print_info()
