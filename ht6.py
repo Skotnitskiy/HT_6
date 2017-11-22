@@ -183,3 +183,24 @@ class DefaultClass1(object):
 
 user = DefaultClass1(dict_of_class)
 user.print_info()
+
+
+class X(object):
+    def __init__(self, val1, val2):
+        self.val1 = val1
+        self.val2 = val2
+
+
+class Y(X):
+    def __init__(self, val1, val2):
+        super(Y, self).__init__(val1, val2)
+
+
+class Z(Y):
+    def __init__(self, val1, val2, val3):
+        super(Z, self).__init__(val1, val2)
+        self.val3 = val3
+
+
+z = Z(1, 5, 10)
+print(z.val1, z.val2, z.val3)
