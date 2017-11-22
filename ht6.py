@@ -167,3 +167,14 @@ class DefaultClass(object):
 
 default_class_obj = DefaultClass("Some name", 10)
 print(default_class_obj.name, default_class_obj.symbol_name)
+
+
+dict_of_class = {'name': 'Vasya', 'l_name': 'Pupkin', 'age': 20}
+
+
+class DefaultClass1(object):
+    def __init__(self, dict):
+        object.__setattr__(self, "__dict__", dict)
+
+
+def_class1_obj = DefaultClass1(dict_of_class)
