@@ -177,4 +177,4 @@ class DefaultClass1(object):
         object.__setattr__(self, "__dict__", dict)
 
 
-def_class1_obj = DefaultClass1(dict_of_class)
+user = DefaultClass1(dict_of_class)
